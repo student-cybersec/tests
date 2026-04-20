@@ -1,21 +1,21 @@
 # =============================================================
-# Cwiczenie: Aktualna pogoda dla Warszawy
+# Exercise: Current weather for Warsaw
 # =============================================================
-# Napisz skrypt ktory wyswietli aktualna pogode dla Warszawy
-# korzystajac z serwisu OpenWeatherMap.
+# Write a script that displays the current weather for Warsaw
+# using the OpenWeatherMap service.
 #
 # API: https://openweathermap.org/current
 # Endpoint: https://api.openweathermap.org/data/2.5/weather
-# Parametry: q=Warsaw&units=metric&lang=pl
+# Parameters: q=Warsaw&units=metric
 #
-# Klucz API jest dostepny w zmiennej srodowiskowej:
+# The API key is available in the environment variable:
 #   OPENWEATHERMAP_API_KEY
 #
-# Wyswietl:
-#   - Nazwe miasta
-#   - Temperature (main.temp)
-#   - Opis pogody (weather[0].description)
-#   - Wilgotnosc (main.humidity)
+# Display:
+#   - City name        (name)
+#   - Temperature      (main.temp)
+#   - Weather          (weather[0].description)
+#   - Humidity         (main.humidity)
 # =============================================================
 
 import os
@@ -23,13 +23,13 @@ import urllib.request
 import json
 
 api_key = os.environ.get("OPENWEATHERMAP_API_KEY", "")
-city = "Warsaw"
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&lang=pl&appid={api_key}"
+city = "Swidnik"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
 
 with urllib.request.urlopen(url) as response:
     data = json.loads(response.read().decode())
 
-print(f"Miasto:      {data['name']}")
-print(f"Temperatura: {data['main']['temp']} °C")
-print(f"Pogoda:      {data['weather'][0]['description']}")
-print(f"Wilgotnosc:  {data['main']['humidity']} %")
+print(f"City:        {data['name']}")
+print(f"Temperature: {data['main']['temp']} °C")
+print(f"Weather:     {data['weather'][0]['description']}")
+print(f"Humidity:    {data['main']['humidity']} %")
