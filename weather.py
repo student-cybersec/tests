@@ -23,7 +23,7 @@ import urllib.request
 import json
 
 api_key = os.environ.get("OPENWEATHERMAP_API_KEY", "")
-city = "Swidnik"
+city = "Warsaw"
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
 
 with urllib.request.urlopen(url) as response:
