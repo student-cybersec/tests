@@ -3,6 +3,6 @@
 
 def greet(name):
     return f"Hello, {name}!"
-#skibidi
+
 result = greet("World")
 print(result)
