@@ -6,4 +6,3 @@ def greet(name):
 
 result = greet("World")
 print(result)
-print("asdf")
