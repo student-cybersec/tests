@@ -10,3 +10,5 @@ print(f"Data: {data}")
 print(f"Average: {average:.2f}")
 print(f"Max: {maximum}, Min: {minimum}")
 print(f"Sorted: {sorted(data)}")
+
+
