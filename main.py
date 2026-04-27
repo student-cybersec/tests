@@ -1,4 +1,8 @@
-import os
+# Welcome to CodePad
+# Edit, run, and push your Python code
 
-api_key = os.environ.get("GITHUB_TOKEN", "NIE MA")
-print(api_key)
+def greet(name):
+    return f"Hello, {name}!"
+
+result = greet("World")
+print(result)
