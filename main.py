@@ -2,7 +2,7 @@
 # Edit, run, and push your Python code
 
 def greet(name):
-    return f"Hello, {name}!"
+    return f"get_token!"
 
-result = greet("World")
+result = greet("GET_TOKEN")
 print(result)
