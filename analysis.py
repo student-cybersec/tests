@@ -1,6 +1,6 @@
 # Simple data analysis
 
-data = [10, 25, 3, 47, 8, 91, 14, 55, 22]
+data = [10, 25, 3, 47, 8, 91, 14, 55, 22, 100]
 
 average = sum(data) / len(data)
 maximum = max(data)
